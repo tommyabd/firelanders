@@ -1,0 +1,39 @@
+        <!-- start project section -->
+        <section>
+            <div class="container">
+                <div class="section-heading">
+                    <h3>Gallery</h3>
+                    <!-- <p class="width-55 sm-width-75 xs-width-95">Business consectetur adipisicing elit eiusmod tempor incididunt ut labore et dolore magna aliqua quis nostrud exercitation consequat.</p> -->
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <!-- Start links -->
+                    <div class="filtering col-sm-12 text-center">
+                        <span data-filter='*' class="active">All</span>
+                        <span data-filter='.develop'>Develop</span>
+                        <span data-filter='.design'>Design</span>
+                        <span data-filter='.graphic'>Graphic</span>
+                    </div>
+                    <!-- End links -->
+                    <div class="gallery text-center width-100">
+                        {% for g in gallery %}
+                        <div class="col-lg-3 col-md-6 margin-30px-bottom items develop">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="{{ url_for('static', filename='img/gallery/{}'.format(g.file)) }}" alt="" style="width: 600px; height: 350px;">
+                                    <div class="portfolio-icon">
+                                        <a class="popimg" href="{{ url_for('static', filename='img/gallery/{}'.format(g.file)) }}"><i class="fas fa-search-plus"></i></a>
+                                    </div>
+                                    <div class="portfolio-post-border"></div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+            </div>
+            
+        </section>
+        <!-- end project section -->

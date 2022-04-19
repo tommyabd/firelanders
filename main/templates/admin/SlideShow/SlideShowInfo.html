@@ -1,0 +1,48 @@
+{% extends 'admin/based.html'%}
+{% block body %}
+    <div class="col-md-12">
+        <div class="card card-white">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                <li class="alert alert-warning">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
+            <div class="card-heading clearfix">
+                <h4 class="card-title">
+                    SlideShow
+                </h4>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>File</th>
+                                <th></th>
+                                <th></th>
+                                <th><a class="btn btn-success" href="{{ url_for('SlideShowAdd') }}">Add</a></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for c in content%}
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>{{ c.title }}</td>
+                                <td>{{ c.file }}</td>
+                                <td></td>
+                                <td></td>
+                                <td><a class="btn btn-warning" href="{{ url_for('SlideShowUpdate', id=c.id) }}">Update</a>
+                                <a class="btn btn-danger" href="{{ url_for('SlideShowDelete', id=c.id) }}">Delete</a></td>
+                            </tr>
+                            {% endfor%}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

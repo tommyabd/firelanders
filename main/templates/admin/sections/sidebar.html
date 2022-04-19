@@ -1,0 +1,63 @@
+        <!-- start page sidebar -->
+        <div class="page-sidebar">
+            <a class="logo-box" href="{{ url_for('index') }}">
+                <span>FireLanders Admin</span>
+                <i class="icon-radio_button_unchecked" id="fixed-sidebar-toggle-button"></i>
+                <i class="icon-close" id="sidebar-toggle-button-close"></i>
+            </a>
+            <div class="page-sidebar-inner">
+                <div class="page-sidebar-menu">
+                    <ul class="accordion-menu">
+                        <li>
+                            <a href="{{ url_for('contactUs') }}">
+                                <i class="menu-icon icon-home4"></i><span>User Messages</span>
+                            </a>
+
+                            <a href="{{ url_for('SlideShowInfo') }}">
+                                <i class="menu-icon icon-inbox"></i><span>SlideShow</span>
+                            </a>
+  
+                            <a href="{{ url_for('ClubDocumentUpdate') }}">
+                                <i class="menu-icon icon-flash_on"></i><span>ClubDocument</span>
+ 
+                            <a href="{{ url_for('about') }}">
+                                <i class="menu-icon icon-layers"></i><span>About</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('question') }}">
+                            <i class="menu-icon icon-code"></i><span>Question</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('gallery') }}">
+                                <i class="menu-icon icon-format_list_bulleted"></i><span>Gallery</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('news') }}">
+                                <i class="menu-icon icon-format_list_bulleted"></i><span>News</span>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="{{ url_for('gallery') }}">
+                                <i class="menu-icon icon-format_list_bulleted"></i><span>Video</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('gallery') }}">
+                                <i class="menu-icon icon-format_list_bulleted"></i><span>Contacts</span>
+                            </a>
+                        </li> -->
+                        <li class="menu-divider"></li>
+
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i class="menu-icon icon-public"></i><span>Changelog</span><span class="label label-danger">1.0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end page sidebar -->

@@ -1,0 +1,49 @@
+{% extends 'admin/based.html'%}
+{% block body %}
+    <div class="col-md-12">
+        <div class="card card-white">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                <li class="alert alert-warning">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
+            <div class="card-heading clearfix">
+                <h4 class="card-title">
+                    SlideShow
+                </h4>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>File</th>
+                                <th></th>
+                                <th></th>
+                                <th>Add IMG</th>
+                                <form method="POST" enctype="multipart/form-data">
+                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                    <th><input type="file" name="file" id="file" class="btn btn-warning " style="float: right;" placeholder="test"></th>
+                                    <th><input type="submit" class="btn btn-success" value="SAVE"></th>
+                                </form>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for c in content %}
+                            <tr>
+                                <th scope="row">{{ c.id }}</th>
+                                <td><img src="{{ url_for('static', filename='img/gallery/{}'.format(c.file)) }}" alt="..." class="img-thumbnail" style="width: 250px; height: 250px;">
+                                <a class="btn btn-danger" href="{{ url_for('galleryDelete', id=c.id) }}">Delete</a></td>
+                            </tr>
+                            {% endfor%}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

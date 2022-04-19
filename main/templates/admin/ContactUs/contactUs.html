@@ -1,0 +1,48 @@
+{% extends 'admin/based.html'%}
+{% block body %}
+    <div class="col-md-12">
+        <div class="card card-white">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                <li class="alert alert-warning">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
+            <div class="card-heading clearfix">
+                <h4 class="card-title">
+                    USER MESSAGES
+                </h4>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NAME</th>
+                                <th>LASTNAME</th>
+                                <th>EMAIL</th>
+                                <th>NUMBER</th>
+                                <th>MESSAGES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for c in content %}
+                            <tr>
+                                <th scope="row">{{ c.id }}</th>
+                                <td>{{  c.name  }}</td>
+                                <td>{{  c.lastname  }}</td>
+                                <td>{{  c.email  }}</td>
+                                <td>{{  c.number  }}</td>
+                                <td>{{  c.message  }}</td>
+                                <td><a class="btn btn-danger" href="{{ url_for('contactUsDelete', id=c.id) }}">Delete</a></td>
+                            </tr>
+                            {% endfor%}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

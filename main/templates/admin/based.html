@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta name="author" content="Chitrakoot Web" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="admin,dashboard" />
+    <meta name="description" content="Fabrex - Responsive Admin Dashboard Template" />
+
+    <!-- title  -->
+    <title>Firelanders Admin</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" href="img/logos/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/logos/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/logos/apple-touch-icon-114x114.png">
+
+    <!-- common plugins -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin/plugins/bootstrap/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin/plugins/font-awesome/css/font-awesome.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin/plugins/icomoon/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin/plugins/uniform/css/default.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin/plugins/switchery/switchery.min.css') }}" />
+
+    <!-- nvd3 plugin -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin/plugins/nvd3/nv.d3.min.css') }}" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin/css/styles.css') }}" />
+
+</head>
+<body>
+
+    <!-- start page loading -->
+    <div id="preloader">
+        <div class="row loader">
+            <div class="loader-icon"></div>
+        </div>
+    </div>
+    <!-- end page loading -->
+
+    <!-- start page container -->
+    <div class="page-container">
+        <!-- start page sidebar -->
+        {% include 'admin/sections/sidebar.html' %}
+        <!-- end page sidebar -->
+
+        <!-- start page content -->
+        <div class="page-content">
+            
+            <!-- start page header -->
+            {% include 'admin/sections/header.html'%}
+            <!-- end page header -->
+
+            <!-- start page inner -->
+            <div class="page-inner">
+                <div class="page-title">
+                    <h3 class="breadcrumb-header">{{ title }}</h3>
+                </div>
+                <!-- start page main wrapper -->
+                <div id="main-wrapper">
+                    <div class="row">
+                        {%  block body %}
+                        
+                        {% endblock %}
+                    </div>
+                </div>
+                <!-- end page main wrapper -->
+                <div class="page-footer">
+                    <p>Copyright &copy; 2022 </p>
+                </div>
+            </div>
+            <!-- end page inner -->
+            
+        </div>
+        <!-- end page content -->
+    </div>
+    <!-- end page container -->
+
+    <!-- all js include start -->
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='admin/plugins/jquery/jquery-3.1.0.min.js') }}"></script>
+
+    <!-- bootstrap -->
+    <script src="{{ url_for('static',filename='admin/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+
+    <!-- slimscroll -->
+    <script src="{{ url_for('static', filename='admin/plugins/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
+
+    <!-- uniform -->
+    <script src="{{ url_for('static', filename='admin/plugins/uniform/js/jquery.uniform.standalone.js') }}"></script>
+
+    <!-- switchery -->
+    <script src="{{ url_for('static', filename='admin/plugins/switchery/switchery.min.js') }}"></script>
+
+    <!-- chartjs -->
+    <script src="{{ url_for('static', filename='admin/plugins/chartjs/chart.min.js') }}"></script>
+
+    <!-- d3.min -->
+    <script src="{{ url_for('static', filename='admin/plugins/d3/d3.min.js') }}"></script>
+
+    <!-- nv.d3.min -->
+    <script src="{{ url_for('static', filename='admin/plugins/nvd3/nv.d3.min.js') }}"></script>
+
+    <!-- float chart -->
+    <script src="{{ url_for('static', filename='admin/plugins/flot/jquery.flot.min.js') }}"></script>
+
+    <!-- float time -->
+    <script src="{{ url_for('static', filename='admin/plugins/flot/jquery.flot.time.min.js') }}"></script>
+
+    <!-- float symbol -->
+    <script src="{{ url_for('static', filename='admin/plugins/flot/jquery.flot.symbol.min.js') }}"></script>
+
+    <!-- float resize -->
+    <script src="{{ url_for('static', filename='admin/plugins/flot/jquery.flot.resize.min.js') }}"></script>
+
+    <!-- float tooltip -->
+    <script src="{{ url_for('static', filename='admin/plugins/flot/jquery.flot.tooltip.min.js') }}"></script>
+
+    <!-- float pie -->
+    <script src="{{ url_for('static', filename='admin/plugins/flot/jquery.flot.pie.min.js') }}"></script>
+
+    <!-- float pie -->
+    <script src="{{ url_for('static', filename='admin/js/pages/dashboard.js') }}"></script>
+
+    <!-- custom scripts -->
+    <script src="{{ url_for('static', filename='admin/js/main.js') }}"></script>
+
+    <!-- all js include end -->
+
+</body>
+
+</html>

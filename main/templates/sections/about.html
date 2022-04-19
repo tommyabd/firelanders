@@ -1,0 +1,16 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="section-heading col align-self-center col-lg-12">
+                <h3>HAQQIMIZDA</h3>
+                </div>
+            <div class="col-lg-5 col-md-12 sm-margin-50px-bottom xs-margin-30px-bottom">
+                <img src="{{ url_for('static', filename='img/about/{}'.format(about.photo)) }}" alt="" class="border-radius-5 box-shadow-primary">
+            </div>
+
+            <div class="col-lg-7 col-md-12">
+                {{ about.text|safe }}
+            </div>
+        </div>
+    </div>
+</section>
