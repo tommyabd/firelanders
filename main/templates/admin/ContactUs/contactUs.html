@@ -24,6 +24,7 @@
                                 <th>LASTNAME</th>
                                 <th>EMAIL</th>
                                 <th>NUMBER</th>
+                                <th>Bike Model</th>
                                 <th>MESSAGES</th>
                             </tr>
                         </thead>
@@ -35,6 +36,7 @@
                                 <td>{{  c.lastname  }}</td>
                                 <td>{{  c.email  }}</td>
                                 <td>{{  c.number  }}</td>
+                                <td>{{ c.bikeModel }}</td>
                                 <td>{{  c.message  }}</td>
                                 <td><a class="btn btn-danger" href="{{ url_for('contactUsDelete', id=c.id) }}">Delete</a></td>
                             </tr>

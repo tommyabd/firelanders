@@ -4,6 +4,8 @@ from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect
 from flask_ckeditor import CKEditor
 from werkzeug.utils import secure_filename
+from flask_login import LoginManager
+from flask_bcrypt import Bcrypt
 
 
 app = Flask(__name__)
@@ -15,5 +17,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app,db)
 csrf = CSRFProtect(app)
 ckeditor = CKEditor(app)
+loginmanager = LoginManager(app)
+bcrypt = Bcrypt(app)
 
 from main import routes

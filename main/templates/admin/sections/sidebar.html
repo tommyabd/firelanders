@@ -10,7 +10,7 @@
                     <ul class="accordion-menu">
                         <li>
                             <a href="{{ url_for('contactUs') }}">
-                                <i class="menu-icon icon-home4"></i><span>User Messages</span>
+                                <i class="menu-icon icon-home4"></i><span>New User</span>
                             </a>
 
                             <a href="{{ url_for('SlideShowInfo') }}">
@@ -35,6 +35,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{{ url_for('countdown') }}">
+                                <i class="menu-icon icon-format_list_bulleted"></i><span>FLRun Date</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{ url_for('news') }}">
                                 <i class="menu-icon icon-format_list_bulleted"></i><span>News</span>
                             </a>
@@ -52,9 +57,8 @@
                         <li class="menu-divider"></li>
 
                         <li>
-                            <a href="javascript:void(0);">
-                                <i class="menu-icon icon-public"></i><span>Changelog</span><span class="label label-danger">1.0</span>
-                            </a>
+                                <a class="btn btn-danger" href="{{ url_for('logout') }}">logout</a>
+
                         </li>
                     </ul>
                 </div>
