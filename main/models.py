@@ -79,3 +79,7 @@ class CountDown(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     date = db.Column(db.String())
     time = db.Column(db.String())
+
+class YoutubeVideo(db.Model):
+    id = db.Column(db.Integer(), primary_key=True)
+    date = db.Column(db.String())

@@ -1,16 +1,16 @@
         <!-- start revolution slideshow-->
-        <div class="rev_slider_wrapper">
+        <div class="rev_slider_wrapper" style="height: auto">
             <div class="rev_slider" id="rev_slider_3" data-version="5.4.5">
                 <ul>
                     {% for photo in ssphotos %}
                     <!-- SLIDE 1 -->
-                    <li data-fstransition="fade" data-transition="fade" data-easein="default" data-easeout="default" data-slotamount="1" data-masterspeed="1200" data-delay="8000" data-title="">
+                    <li data-fstransition="fade" data-transition="fade" data-easein="default" data-easeout="default" data-slotamount="1" data-masterspeed="1200" data-delay="8000" data-title="" style="width: 100%; height: 100%">
 
                         <!-- Overlay -->
                         <div class="opacity-medium z-index-1"></div>
 
                         <!-- MAIN IMAGE -->
-                        <img src="{{ url_for('static', filename='img/slideshow/{}'.format(photo.file)) }}" style="height:30%" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgparallax="7" class="rev-slidebg">
+                        <img src="{{ url_for('static', filename='img/slideshow/{}'.format(photo.file)) }}"  data-bgrepeat="no-repeat" data-bgfit="cover" data-bgparallax="7" class="rev-slidebg">
 
                     </li>
                     <!-- end slide 1 -->
