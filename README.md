@@ -1,1 +1,1 @@
-firelanders.herokuapp.com
+http://firelanders.herokuapp.com
